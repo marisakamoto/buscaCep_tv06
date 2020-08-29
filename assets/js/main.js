@@ -13,7 +13,8 @@ function pesquisaCEP(valor) {
             } else {
                 bairro.value = dados.bairro;
                 rua.value = dados.logradouro;
-                UF.value = dados.uf
+                UF.value = dados.uf;
+                cidade.value = dados.localidade;
             }
 
 
