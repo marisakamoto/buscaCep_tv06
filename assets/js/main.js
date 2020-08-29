@@ -5,13 +5,25 @@ function pesquisaCEP(valor) {
         .then((resposta) => resposta.json())
         .then((dados) => {
             console.log(dados);
-            bairro.value = dados.bairro;
-            rua.value = dados.logradouro;
-            UF.value = dados.uf
+            if (dados.erro == true) {
+                CEP.classList.add('red-glow');
+                rua.value = "CEP inválido";
+                UF.value = "";
+                bairro.value = "";
+            } else {
+                bairro.value = dados.bairro;
+                rua.value = dados.logradouro;
+                UF.value = dados.uf
+            }
+
+
+
         });
 };
+
 if (CEP.valueLength = 8) {
     CEP.onchange = () => {
+        CEP.classList.remove('red-glow');
         console.log(CEP.value);
         pesquisaCEP(CEP.value);
     }
