@@ -1,72 +1,93 @@
-<main class="py-2">
-    <div class="container d-flex justify-content-center align-items-center">
-        <form class="form rounded d-flex flex-column justify-content-center align-items-center p-2" action="">
-            <div class="bg-image"></div>
-            <div class="col-auto">
-                <label for="CEP">CEP</label>
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fa fa-search"></i></div>
-                    </div>
-                    <input type="text" class="form-control" id="CEP" maxlength="9" />
-                </div>
-            </div>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-            <div class="col-auto">
-                <label for="ruaInput">Rua</label>
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <i class="fa fa-road"></i>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/imgs/icon.png" type="image/x-icon">
+    <script defer src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Busca CEP</title>
+</head>
+
+<body>
+    <main class="py-2">
+        <div class="container d-flex justify-content-center align-items-center">
+
+            <form class="form rounded d-flex flex-column justify-content-center align-items-center p-2" action="">
+                <div class="bg-image"></div>
+                <div class="col-auto">
+                    <label for="CEP">CEP</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-search"></i></div>
                         </div>
+                        <input type="text" class="form-control" id="CEP" maxlength="9" />
                     </div>
-                    <input type="text" class="form-control" id="rua" readonly />
                 </div>
-            </div>
 
-            <div class="col-auto">
-                <label for="numero">Número</label>
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <i class="fa fa-list-ol"></i>
+                <div class="col-auto">
+                    <label for="ruaInput">Rua</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-road"></i>
+                            </div>
                         </div>
+                        <input type="text" class="form-control" id="rua" readonly />
                     </div>
-                    <input type="text" class="form-control" id="numero" />
                 </div>
-            </div>
 
-            <div class="col-auto">
-                <label for="complemento">Complemento</label>
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fa fa-plus"></i></div>
-                    </div>
-                    <input type="text" class="form-control" id="complemento" />
-                </div>
-            </div>
-
-            <div class="col-auto">
-                <label for="bairro">Bairro</label>
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fa fa-home"></i></div>
-                    </div>
-                    <input type="text" class="form-control" id="bairro" readonly />
-                </div>
-            </div>
-
-            <div class="col-auto">
-                <label for="UF">UF</label>
-                <div class="input-group mb-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <i class="fa fa-map-signs"></i>
+                <div class="col-auto">
+                    <label for="numero">Número</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-list-ol"></i>
+                            </div>
                         </div>
+                        <input type="text" class="form-control" id="numero" />
                     </div>
-                    <input type="text" class="form-control" id="UF" readonly />
                 </div>
-            </div>
-        </form>
-    </div>
-</main>
+
+                <div class="col-auto">
+                    <label for="complemento">Complemento</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-plus"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="complemento" />
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <label for="bairro">Bairro</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-home"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="bairro" readonly />
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <label for="UF">UF</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-map-signs"></i>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="UF" readonly />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
