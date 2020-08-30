@@ -10,6 +10,7 @@ function pesquisaCEP(valor) {
                 rua.value = "CEP inválido";
                 UF.value = "";
                 bairro.value = "";
+                cidade.value = "";
             } else {
                 bairro.value = dados.bairro;
                 rua.value = dados.logradouro;
